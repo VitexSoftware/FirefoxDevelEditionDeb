@@ -32,7 +32,7 @@ sudo apt install lsb-release wget apt-transport-https bzip2
 sudo wget -O /usr/share/keyrings/vitexsoftware.gpg https://repo.vitexsoftware.cz/keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/vitexsoftware.gpg]  https://repo.vitexsoftware.cz  $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/vitexsoftware.list
 sudo apt update
-udo apt install firefox-devedition
+sudo apt install firefox-devedition
 ```
 
 Testing
