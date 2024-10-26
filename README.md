@@ -1,7 +1,7 @@
 Firefox Developer Edition package for Debian / Ubuntu
 =====================================================
 
-![FirefoxDeveloperEdition](https://raw.githubusercontent.com/VitexSoftware/FirefoxDevelEditionDeb/master/mozicon300.png "DeveloperEdition logo")
+![FirefoxDeveloperEdition](mozicon300.png?raw=true "DeveloperEdition logo")
 
 A version of Firefox that's tailored for web developers.
 
@@ -18,10 +18,10 @@ Building package
 Installation
 ------------
 
-Download from https://www.vitexsoftware.cz/pool/main/f/firefox-devedition/firefox-devedition_1.0.0_all.deb or Build package. Then install:
+Download from https://www.vitexsoftware.cz/pool/main/f/firefox-devedition/ firefox-devedition_XXXX_all.deb or Build package. Then install:
 
 ```shell
-    gdebi firefox-devedition_1.0.0_all.deb
+    sudo apt install ./firefox-devedition_XXXX_all.deb
 ```
 
 
@@ -29,8 +29,9 @@ Or you can use repo:
 
 ```shell
 sudo apt install lsb-release wget apt-transport-https bzip2
-sudo wget -O /usr/share/keyrings/vitexsoftware.gpg https://repo.vitexsoftware.cz/keyring.gpg
-echo "deb [signed-by=/usr/share/keyrings/vitexsoftware.gpg]  https://repo.vitexsoftware.cz  $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/vitexsoftware.list
+
+wget -qO- https://repo.vitexsoftware.com/keyring.gpg | sudo tee /etc/apt/trusted.gpg.d/vitexsoftware.gpg
+echo "deb [signed-by=/etc/apt/trusted.gpg.d/vitexsoftware.gpg]  https://repo.vitexsoftware.com  $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/vitexsoftware.list
 sudo apt update
 sudo apt install firefox-devedition
 ```
