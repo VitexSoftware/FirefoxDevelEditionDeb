@@ -39,13 +39,14 @@ sudo apt install firefox-devedition
 Testing
 -------
 
+```shell
     vagrant up
     vagrant ssh
     sudo apt install xfce4
     startxfce4
+```
+
+![Vagrant Test](vagrantubuntu.png?raw=true "DeveloperEdition in Ubuntu")
 
 
-![Vagrant Test](https://raw.githubusercontent.com/VitexSoftware/FirefoxDevelEditionDeb/master/vagrantubuntu.png "DeveloperEdition in Ubuntu")
-
-
-See also: https://github.com/Vitexus/ThunderbirdDailyDeb https://github.com/Vitexus/FirefoxNightlyDeb
+See also: https://github.com/Vitexus/ThunderbirdDailyDeb 
